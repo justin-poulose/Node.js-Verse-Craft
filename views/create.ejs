@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <div class="home">
+        <div class='headerFeed'>
+            <h2 >Create Post</h2>
+        </div>
+        <div class="poemform">
+            <form >
+                <lable>Poem Title</lable><br></br>
+                <input 
+                type="text" required 
+                
+                ></input><br></br>
+                <lable>Author's Name</lable><br></br>
+                <input type="text" required 
+                ></input><br></br>
+                <lable>write your Verse here</lable><br></br>
+                <textarea required 
+                >
+                </textarea><br></br>
+                <button type="submit" class="submitbutton">Publish</button>
+            </form>
+        </div>
+    </div>
+
+</body>

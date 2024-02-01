@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+}
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar h1 {
+  color: #1e37c5;
+}
+.navbar .links {
+  margin-left: auto;
+
+}
+
+
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  padding: 6px;
+  text-wrap: wrap;
+  display: inline-flex;
+}
+
+.createbutton{
+    color:white;
+    background-Color: #1e37c5;
+    border-Radius:50px;
+    padding: 5px 15px 5px 15px;
+}
+.createbutton:hover{
+    color: #f0f2fb;
+}
+
+.home {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+.headerFeed{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom:30px;
+}
+.headerFeed input{
+  padding: 2px 15px;
+  height: 25px;
+  border: 1px solid rgba(255, 0, 0, 0);
+  border-radius: 15px;
+  background-color: #dce1fe;
+}
+.postpage{
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f4f6ff;
+  border-radius: 25px;
+}
+.post{
+  background-color: #dce1fe;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.post:hover{
+  background-color: #f0f2fb;
+}
+.post p{
+  color: #1e37c5;
+}
+a{
+  text-decoration: none;
+  color: #1e37c5;
+}
+.poemform{
+  padding-left: 5%;
+}
+lable,input,textarea, button{
+  margin: 5px;
+  font-size:1.2em;
+}
+input,textarea{
+  border: 1px solid rgba(255, 0, 0, 0);
+  border-bottom: 3px solid #bfc7f5;
+  background-color: #f0f2fb;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+textarea{
+  height:200px;
+  width: 400px;
+}
+
+.submitbutton{
+    font-Size:'1.1em';
+    color:"white";
+    background-Color: "#1e37c5";
+    border-Radius:'50px';
+    border:'none';
+    padding: '5px 25px 5px 25px';
+}
