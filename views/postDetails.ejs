@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel="stylesheet" href="http://localhost:3000/styles.css">
+    </head>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <div class="home">
+        <div class="postpage">
+            <div class='headerFeed'> 
+                    <div>
+                    <h2 class="postpageh2"><%= postDetails.title %></h2>
+                    <h3 class="postpageh3"><%= postDetails.author %></h3>
+                    <p class="postpagep"><%= postDetails.poem %></p>
+                    <button id="deleteButton" class="postpagehdelete"  value="<%= postDetails.id %>">Delete</button>
+                    </div>
+                    
+            </div>
+        </div>
+    </div>
+    <script>
+    const deletepoem = () => {
+        fetch(`http://localhost:3000/posts/${deleteid}`, {
+            method: 'DELETE',
+        }).then(response => {
+            if (response.ok) {
+                window.location.href = '/sucessful'; 
+            } else {
+                console.error('Error deleting post:', response.statusText);
+            }
+        }).catch(error => {
+            console.error('Error deleting post:', error);
+        });
+    };
+    
+    const deleteButton = document.getElementById('deleteButton');
+    const deleteid = deleteButton.value;
+    deleteButton.addEventListener('click', deletepoem);
+</script>
+</body>
+</html>

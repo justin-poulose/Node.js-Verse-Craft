@@ -6,11 +6,19 @@
   font-family: "Quicksand";
   color: #333;
 }
+body{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .navbar {
   padding: 20px;
   display: flex;
   align-items: center;
   max-width: 600px;
+  width:100%;
   margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
 }
@@ -44,6 +52,7 @@
 
 .home {
   max-width: 600px;
+  width:100%;
   margin: 40px auto;
   padding: 20px;
 }
@@ -109,4 +118,22 @@ textarea{
     border-Radius:'50px';
     border:'none';
     padding: '5px 25px 5px 25px';
+}
+.homeh2{
+  color:#1e37c5;
+}
+.postpageh2{
+  color:#1e37c5;
+  margin-Bottom:20px;}
+.postpageh3{
+  color:#1e37c5;margin-Bottom:10px;}
+.postpagep{
+  margin-Bottom:5px;font-Size:1.3em;font-Weight:bold;}
+.postpagehdelete{
+      font-Size:1.1em;
+  color:white;
+  background-Color: #1e37c5;
+  border-Radius:50px;  border:none;
+  padding: 5px 25px 5px 25px;
+  margin-Top:20px;
 }

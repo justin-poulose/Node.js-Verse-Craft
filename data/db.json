@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Whispers of the Breeze",
+      "poem": "In twilight's tender grasp they rise, The whispers of the breeze, Dancing leaves in moonlit skies, A secret told with ease.",
+      "author": "Emily Rivers"
+    },
+    {
+      "id": "2",
+      "title": "Echoes of Silence",
+      "poem": "In stillness, silence softly weaves, Echoes linger in tranquil eaves , Unspoken words in quiet strife ,A symphony of muted life.",
+      "author": "Liam Serenade"
+    },
+    {
+      "id": "3",
+      "title": "Serenade of the Stars",
+      "poem": "Midnight's curtain gently draws, Celestial serenade without flaws , Stars compose in silent light , A cosmic ballad in the night.",
+      "author": "Luna Evernight"
+    }
+  ]
+}

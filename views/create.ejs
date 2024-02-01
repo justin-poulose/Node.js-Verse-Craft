@@ -7,22 +7,45 @@
             <h2 >Create Post</h2>
         </div>
         <div class="poemform">
-            <form >
-                <lable>Poem Title</lable><br></br>
-                <input 
-                type="text" required 
-                
-                ></input><br></br>
-                <lable>Author's Name</lable><br></br>
-                <input type="text" required 
-                ></input><br></br>
-                <lable>write your Verse here</lable><br></br>
-                <textarea required 
-                >
-                </textarea><br></br>
-                <button type="submit" class="submitbutton">Publish</button>
+            <form id="postForm">
+                <label>Poem Title</label><br>
+                <input type="text" id="titleInput" required><br>
+                <label>Author's Name</label><br>
+                <input type="text" id="authorInput" required><br>
+                <label>Write your Verse here</label><br>
+                <textarea id="poemInput" required></textarea><br>
+                <button type="submit" class="postpagehdelete">Publish</button>
             </form>
         </div>
     </div>
+<script>
+    
+    const handleSubmit = async (e) => {
+    e.preventDefault();
 
+    const title = document.getElementById('titleInput').value;
+    const author = document.getElementById('authorInput').value;
+    const poem = document.getElementById('poemInput').value;
+    console.log((title));
+    try {
+        const response = await axios.post('http://localhost:8000/posts', {
+            title,
+            author,
+            poem
+        });
+
+        console.log('Post created successfully:', response.data);
+        
+        window.location.href = '/sucessful';
+        
+    } catch (error) {
+        console.error('Error creating post:', error);
+    }
+};
+
+const form = document.getElementById('postForm');
+form.addEventListener('submit', handleSubmit);
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>

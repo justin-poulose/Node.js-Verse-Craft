@@ -2,5 +2,52 @@
 <%- include('./partials/head.ejs') %>
 <body>
     <%- include('./partials/nav.ejs') %>
-    this is home
+    <div class="home">
+        <div class='headerFeed'>
+            <h2 class= "homeh2">Home Feed</h2>
+            <input type="textbox" id="searchInput"
+             placeholder='Search Verse'></input>
+        </div>
+        <h2>All Posts</h2>
+        <div class="postlist">
+            <% if (post.length > 0) { %>
+            <% post.forEach(post => { %>
+            <a href=<%="/posts/"+ post.id %>>
+            <div class='post'>
+                <h2><%= post.title %></h3>
+                <p><%= post.author %></p>
+            </div>
+            </a>
+            <% }) %>
+            <% } else { %>
+            <p>There are no blogs to display...</p>
+            <% } %>
+            
+        </div>
+    </div>
+    <script>
+       
+        // Select the search input field
+        const searchInput = document.getElementById('searchInput');
+
+        // Add an event listener for input changes
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase(); // Get the search term
+
+            // Select all post elements
+            const posts = document.querySelectorAll('.post');
+
+            // Iterate over each post element
+            posts.forEach(post => {
+                const title = post.querySelector('h2').innerText.toLowerCase(); // Get the post title
+
+                // If the title contains the search term, display the post; otherwise, hide it
+                if (title.includes(searchTerm)) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
